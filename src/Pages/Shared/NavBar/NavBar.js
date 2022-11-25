@@ -7,12 +7,12 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
             <li tabIndex={0}>
                 <Link to='/'>
-                Ptoducts
+                Products
                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                 </Link>
                 <ul className="p-2">
-                <li><Link to='/'>Andriod</Link></li>
-                <li><Link to='/'>Ios</Link></li>
+                <li className='btn btn-primary'><Link to='/'>Android</Link></li>
+                <li className='btn btn-primary'><Link to='/'>Ios</Link></li>
                 </ul>
             </li>
             <li><Link to='/'>Blogs</Link></li>
@@ -20,7 +20,7 @@ const NavBar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 flex justify-between">
         <div className="navbar-start">
             <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
