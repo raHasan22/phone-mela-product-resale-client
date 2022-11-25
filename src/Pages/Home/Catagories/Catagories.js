@@ -2,9 +2,9 @@ import React from 'react';
 
 const Catagories = () => {
     return (
-        <>
+        <div className='mx-5'>
         <div>
-            <h2 className='text-4xl text-center mt-5'>Product Catagories</h2>
+            <h2 className='text-4xl text-center'>Product Catagories</h2>
         </div>
         <div className='my-8 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10'>
             <div className="card card-side bg-base-100 shadow-xl">
@@ -35,7 +35,7 @@ const Catagories = () => {
             </div>
             </div>
         </div>
-        </>
+        </div>
     );
 };
 
