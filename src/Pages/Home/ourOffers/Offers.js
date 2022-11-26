@@ -6,8 +6,8 @@ const Offers = () => {
             <div className="card sm:w-96 md:w-[600px] lg:w-[1024px] bg-base-100 shadow-xl image-full mx-auto">
             <figure><img src="https://news.cgtn.com/news/2022-03-31/Qatar-2022-World-Cup-football-will-be-fastest-ever-18QoGQieMmY/img/8f5ea785498241ef86064bc29809b5b8/8f5ea785498241ef86064bc29809b5b8.jpeg" alt="football" /></figure>
             <div className="card-body">
-                <h2 className="card-title text-white text-4xl">Discount</h2>
-                <p className='text-white'>We are providing flat 10% discount all of our iPhones and 8% discount on android phones until Qatar world cup 2022 Final</p>
+                <h2 className="card-title text-white text-4xl">Ongoing Discount</h2>
+                <p className='text-white'>1. We are providing flat 10% discount all of our iPhones and 8% discount on android phones until Qatar world cup 2022 Final</p>
                 <div className="card-actions justify-end">
                 <button className="btn btn-primary">Buy Now</button>
                 </div>

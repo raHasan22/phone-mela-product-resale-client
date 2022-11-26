@@ -3,12 +3,12 @@ import React from 'react';
 const Sell = () => {
     return (
         <div className='my-10'>
-            <div className="card sm:w-96 md:w-[600px] lg:w-[1024px] bg-base-100 shadow-xl image-full mx-auto">
-            <figure><img src="https://images.ctfassets.net/wcfotm6rrl7u/2sDJE99xaUTEDxrkiopmtK/be3cba35562ec25a738ac957d93d7964/april_8th_launch-og_image.jpg?w=1200" alt="football" /></figure>
-            <div className="card-body">
-                <h2 className="card-title text-white text-4xl">Sell Products</h2>
-                <p className='text-white'>Sell your used phones and tablets that are in good condition</p>
-                <div className="card-actions justify-end">
+            <div className="hero min-h-screen bg-base-200 my-10 lg:w-5/6 mx-auto">
+            <div className="hero-content flex-col lg:flex-row-reverse justify-between">
+                <img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/03/best-phone-2022-920x613.jpg" className="max-w-sm rounded-lg shadow-2xl" alt='' />
+                <div>
+                <h1 className="text-5xl font-bold">Sell Products!</h1>
+                <p className="py-6">Sell your used phones and tablets that are in good condition</p>
                 <button className="btn btn-primary">Sell now</button>
                 </div>
             </div>
