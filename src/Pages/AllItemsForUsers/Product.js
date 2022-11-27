@@ -14,7 +14,7 @@ const Product = ({product, setDetails}) => {
             <p>Price: ${sellingPrice}</p>
             <div className="card-actions">
             <label htmlFor="details-1" className="btn" onClick={()=> setDetails(product)}>Details</label>
-            <button className="btn btn-primary">Buy Now</button>
+            <label htmlFor="user-info" className="btn btn-primary"  onClick={()=> setDetails(product)}>Buy Now</label>
             </div>
         </div>
         </div>
