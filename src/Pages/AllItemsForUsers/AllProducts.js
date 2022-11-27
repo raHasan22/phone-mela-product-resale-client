@@ -31,7 +31,9 @@ const AllProducts = () => {
             }
             {
                 details && 
-                <UserInfo details={details}></UserInfo>
+                <UserInfo details={details}
+                setDetails={setDetails}
+                ></UserInfo>
             }
             
         </div>

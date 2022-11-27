@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserInfo = ({details}) => {
+const UserInfo = ({details, setDetails}) => {
     const {brandName, model, sellingPrice} = details;
 
     const handleBooking = event =>{
@@ -11,7 +11,16 @@ const UserInfo = ({details}) => {
         const address = form.address.value;
         const price = form.price.value;
         const phone = form.phone.value;
-        console.log(name, email, address, price, phone)
+        const buyerInfo = {
+            productName: brandName + ' '+ model,
+            buyerName: name,
+            buyerAddress: address,
+            email,
+            price,
+            phone
+            }
+            console.log(buyerInfo);
+            setDetails(null)
     }
 
     return (
@@ -26,7 +35,7 @@ const UserInfo = ({details}) => {
                 <input name="address" type="text" placeholder="Your Address" className="input input-bordered input-primary w-full mb-2" />
                 <input name="price" type="text" placeholder="Price" value={sellingPrice} className="input input-bordered input-primary w-full mb-2" disabled />
                 <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered input-primary w-full mb-2"/> <br />
-                <input className="btn btn-primary w-full mb-2" type="submit" value="Submit" />
+                <input onClick={() => setDetails(details)} className="btn btn-primary w-full mb-2" type="submit" value="Submit" />
                 </form>
                 <label htmlFor="user-info" className="btn w-full">Cancel</label>
                 
