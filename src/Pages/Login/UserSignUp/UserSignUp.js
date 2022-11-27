@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider';
 
 const UserSignUp = () => {
     const {register, formState: { errors },  handleSubmit} = useForm();
+    const {createUser, updateUser} = useContext(AuthContext);
 
     const handleUserSignUp = data => {
-        console.log(data)
+        console.log(data);
+        createUser(data.email, data.password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            const userData = {
+                displayName: data.name
+            }
+            updateUser(userData)
+            .then(() =>{})
+            .catch(err =>{})
+        })
+        .catch(error => console.error(error));
     }
 
 

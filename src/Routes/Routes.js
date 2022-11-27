@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SellerSignUp from "../Pages/Login/UserSignUp/SellerSignUp";
 import UserSignUp from "../Pages/Login/UserSignUp/UserSignUp";
+import Manage from "../Pages/Manage/Manage";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 element: <SellerSignUp></SellerSignUp>
             }
         ]
+    },
+    {
+        path: '/manage',
+        element: <Manage></Manage>
     }
 ])
 
