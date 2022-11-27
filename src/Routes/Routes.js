@@ -4,6 +4,8 @@ import AllProducts from "../Pages/AllItemsForUsers/AllProducts";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import SellerSignUp from "../Pages/Login/UserSignUp/SellerSignUp";
+import UserSignUp from "../Pages/Login/UserSignUp/UserSignUp";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
             {
                 path: '/products',
                 element: <AllProducts></AllProducts>
+            },
+            {
+                path: '/signup',
+                element: <UserSignUp></UserSignUp>
+            },
+            {
+                path: '/sellersignup',
+                element: <SellerSignUp></SellerSignUp>
             }
         ]
     }

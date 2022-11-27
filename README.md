@@ -71,3 +71,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 * Client Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-raHasan22]
 * Server Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-raHasan22]
+
+* Project based on Resell service of smart phones
+* Used react router dom
+* environment variable used
+* Forms are validate using React-form-hook and regX
