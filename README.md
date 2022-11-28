@@ -76,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * Used react router dom
 * environment variable used
 * Forms are validate using React-form-hook and regX
+* React Hot Toast Used
