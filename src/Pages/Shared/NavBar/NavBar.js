@@ -25,7 +25,7 @@ const NavBar = () => {
                 <li className='btn btn-primary'><Link to='/'>Tablets</Link></li>
                 </ul>
             </li>
-            <li><Link to='/blogs'>Blogs</Link></li>
+            <li><Link to='/blog'>Blogs</Link></li>
             { user?.uid ?  <>
                 <li><Link to='/manage'>Manage</Link></li>
                 <li><button onClick={handleLogOut}>Log Out</button></li> 

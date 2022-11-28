@@ -77,3 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * environment variable used
 * Forms are validate using React-form-hook and regX
 * React Hot Toast Used
+* Added Meaningful favicon
+* Spinner added at loading state
+* Site have error404 image

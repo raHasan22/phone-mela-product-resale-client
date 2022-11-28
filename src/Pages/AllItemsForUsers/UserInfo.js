@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const UserInfo = ({details, setDetails}) => {
-    const {brandName, model, sellingPrice} = details;
+    const {brandName, model, sellingPrice, ram, rom} = details;
+    const {user} = useContext(AuthContext)
 
     const handleBooking = event =>{
         event.preventDefault()
@@ -13,14 +16,31 @@ const UserInfo = ({details, setDetails}) => {
         const phone = form.phone.value;
         const buyerInfo = {
             productName: brandName + ' '+ model,
+            ram,
+            rom,
             buyerName: name,
             buyerAddress: address,
             email,
             price,
             phone
             }
-            console.log(buyerInfo);
-            setDetails(null)
+            console.log(buyerInfo)
+            fetch('http://localhost:5000/bookings', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(buyerInfo)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+               if(data.acknowledged){
+                setDetails(null);
+                toast.success('Your booking successful')
+               }
+            })
+            
     }
 
     return (
@@ -30,10 +50,12 @@ const UserInfo = ({details, setDetails}) => {
             <div className="modal-box">
                 <h3 className="font-bold text-lg mb-2">{brandName} {model}</h3>
                 <form onSubmit={handleBooking}>
-                <input name="name" type="text" placeholder="Your Name" className="input input-bordered input-primary w-full mb-2" />
-                <input name="email" type="email" placeholder="Email Address" className="input input-bordered input-primary w-full mb-2" />
+                <input name="ram" type="text" defaultValue={ram} disabled placeholder="Device Ram" className="input input-bordered input-primary w-full mb-2" />
+                <input name="rom" type="text" defaultValue={rom} disabled placeholder="Device Storage" className="input input-bordered input-primary w-full mb-2" />
+                <input name="name" type="text" defaultValue={user?.displayName} disabled placeholder="Your Name" className="input input-bordered input-primary w-full mb-2" />
+                <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="input input-bordered input-primary w-full mb-2" />
                 <input name="address" type="text" placeholder="Your Address" className="input input-bordered input-primary w-full mb-2" />
-                <input name="price" type="text" placeholder="Price" value={sellingPrice} className="input input-bordered input-primary w-full mb-2" disabled />
+                <input name="price" type="text" placeholder="Price" defaultValue={sellingPrice} className="input input-bordered input-primary w-full mb-2" disabled />
                 <input name="phone" type="text" placeholder="Phone Number" className="input input-bordered input-primary w-full mb-2"/> <br />
                 <input onClick={() => setDetails(details)} className="btn btn-primary w-full mb-2" type="submit" value="Submit" />
                 </form>

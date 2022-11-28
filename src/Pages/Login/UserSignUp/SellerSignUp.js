@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const SellerSignUp = () => {
     const {register, formState: { errors },  handleSubmit} = useForm();
     const {createUser, updateUser} = useContext(AuthContext);
+    const navigate = useNavigate()
 
 
     const handleSellerSignUp = data => {
@@ -20,7 +21,9 @@ const SellerSignUp = () => {
                 displayName: data.name
             }
             updateUser(userData)
-            .then(() =>{})
+            .then(() =>{
+                navigate('/');
+            })
             .catch(err =>{})
         })
         .catch(error => {
