@@ -33,6 +33,7 @@ const Secondary = () => {
             <li><Link to='/manage/mysells'>My Sells</Link></li>
             <li><Link to='/manage/users'>Users</Link></li>
            <li><Link to='/manage/Sellers'>Sellers</Link></li>
+           <li><Link to='/manage/reports'>Reports</Link></li>
             </>
           }
         </ul>
@@ -52,6 +53,7 @@ const Secondary = () => {
             <li><Link to='/manage/mysells'>My Sells</Link></li>
             <li><Link to='/manage/users'>Users</Link></li>
            <li><Link to='/manage/Sellers'>Sellers</Link></li>
+           <li><Link to='/manage/reports'>Reports</Link></li>
             </>
           }
     </ul>

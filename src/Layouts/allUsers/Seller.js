@@ -6,14 +6,14 @@ const Seller = () => {
     const { data: sellers = [], refetch} = useQuery({
         queryKey: ['sellers'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/sellers');
+            const res = await fetch('https://mobile-phone-resale-server.vercel.app/sellers');
             const data = await res.json();
             return data;
         }
     })
 
     const handleVerify = id => {
-        fetch(`http://localhost:5000/seller/verify/${id}`,{
+        fetch(`https://mobile-phone-resale-server.vercel.app/seller/verify/${id}`,{
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

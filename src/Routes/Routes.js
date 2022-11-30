@@ -17,6 +17,7 @@ import SellerSignUp from "../Pages/Login/UserSignUp/SellerSignUp";
 import UserSignUp from "../Pages/Login/UserSignUp/UserSignUp";
 import MyOrder from "../Pages/MyOrder/MyOrder";
 import MySells from "../Pages/MySells/MySells";
+import AllReport from "../Pages/Report/AllReports/AllReport";
 import Report from "../Pages/Report/Report";
 import SellerAddPhone from "../Pages/SellerAddPhone/SellerAddPhone";
 import AdminRoute from "./AdminRoute/AdminRoute";
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
             {
                 path: '/manage/sellers',
                 element: <AdminRoute><Seller></Seller></AdminRoute>
+            },
+            {
+                path: '/manage/reports',
+                element: <AdminRoute><AllReport></AllReport></AdminRoute>
             }
         ]
     },

@@ -30,7 +30,7 @@ const SellerAddPhone = () => {
             usedTime: form.usedTime.value,
         }
         console.log(deviceInfo);
-        fetch('http://localhost:5000/phoneInfoCollection', {
+        fetch('https://mobile-phone-resale-server.vercel.app/phoneInfoCollection', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

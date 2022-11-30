@@ -69,8 +69,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-* Client Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-raHasan22]
-* Server Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-raHasan22]
+# Client Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-raHasan22]
+# Server Site Link: [https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-raHasan22]
 
 * Project based on Resell service of smart phones
 * Used react router dom
@@ -85,7 +85,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * Verify Using JWT token
 * A buyer can only see 'My Order' in manage page
 * A seller can sell and buy products, so seller can use 'My Orders' and 'My selling' page where seller can see posted items
-* An admin can buy, sell or manage users. so Admin can see all the paths in manage page. admin email: 'kola@miya.com' password: asdf123
 * Google Sign in implemented, only allow as a buyer
 * Buyers can delete their orders, Seller can delete their post
 * Extra Section About, Contact, Discount.
+* Report to admin implemented
+# Server Deploy: [https://mobile-phone-resale-server.vercel.app]
+
+# Live Site: [https://phone-mela-c642a.web.app/]
+
+# adminEmail: <kola@miya.com>
+
+# adminPassword: <asdf123>

@@ -6,7 +6,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 const MyOrder = () => {
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `https://mobile-phone-resale-server.vercel.app/bookings?email=${user?.email}`;
 
     const { data: bookings = [], refetch } = useQuery({
         queryKey: ['bookings', user?.email],
@@ -22,7 +22,7 @@ const MyOrder = () => {
     })
 
     const handleBookDelete = id => {
-        fetch(`http://localhost:5000/bookings/delete/${id}`,{
+        fetch(`https://mobile-phone-resale-server.vercel.app/bookings/delete/${id}`,{
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

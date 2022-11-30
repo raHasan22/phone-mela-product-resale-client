@@ -10,7 +10,7 @@ const AllProducts = () => {
 
     const {data: products = []} = useQuery({
         queryKey: ['phoneInfoCollection'],
-        queryFn: () => fetch('http://localhost:5000/phoneInfoCollection')
+        queryFn: () => fetch('https://mobile-phone-resale-server.vercel.app/phoneInfoCollection')
                         .then(res => res.json())
     })
 

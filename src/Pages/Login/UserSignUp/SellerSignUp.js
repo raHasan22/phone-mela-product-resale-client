@@ -18,11 +18,9 @@ const SellerSignUp = () => {
 
 
     const handleSellerSignUp = data => {
-        console.log(data)
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
-            console.log(user);
             toast.success(`${user.email} account created`);
             const userData = {
                 displayName: data.name
@@ -40,7 +38,7 @@ const SellerSignUp = () => {
 
     const saveUser = (name, email, userType) =>{
         const user = {name, email, userType};
-        fetch('http://localhost:5000/users', {
+        fetch('https://mobile-phone-resale-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

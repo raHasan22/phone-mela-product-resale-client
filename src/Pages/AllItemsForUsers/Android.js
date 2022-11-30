@@ -9,7 +9,7 @@ const Android = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/phoneInfoCollection/Android/Smart%20Phone')
+        fetch('https://mobile-phone-resale-server.vercel.app/phoneInfoCollection/Android/Smart%20Phone')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
