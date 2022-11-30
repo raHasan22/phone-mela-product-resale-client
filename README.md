@@ -80,3 +80,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * Added Meaningful favicon
 * Spinner added at loading state
 * Site have error404 image
+* Added React Query
+* Product loads in three catagories
+* Verify Using JWT token
+* A buyer can only see 'My Order' in manage page
+* A seller can sell and buy products, so seller can use 'My Orders' and 'My selling' page where seller can see posted items
+* An admin can buy, sell or manage users. so Admin can see all the paths in manage page. admin email: 'kola@miya.com' password: asdf123
+* Google Sign in implemented, only allow as a buyer
+* Buyers can delete their orders, Seller can delete their post
+* Extra Section About, Contact, Discount.

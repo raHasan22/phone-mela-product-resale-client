@@ -1,13 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
+import useJwt from '../../../CustomHooks/useJwt';
 
 const SellerSignUp = () => {
     const {register, formState: { errors },  handleSubmit} = useForm();
     const {createUser, updateUser} = useContext(AuthContext);
+    const [userEmail, setUserEmail] = useState('');
+    const [token] = useJwt(userEmail);
     const navigate = useNavigate()
+
+    if(token){
+        navigate('/');
+    }
 
 
     const handleSellerSignUp = data => {
@@ -22,13 +29,28 @@ const SellerSignUp = () => {
             }
             updateUser(userData)
             .then(() =>{
-                navigate('/');
+                saveUser(data.name, data.email, data.userType)
             })
             .catch(err =>{})
         })
         .catch(error => {
             toast.error(`${error}`)
         });
+    }
+
+    const saveUser = (name, email, userType) =>{
+        const user = {name, email, userType};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            setUserEmail(email)
+        } )
     }
 
 
@@ -61,7 +83,6 @@ const SellerSignUp = () => {
                 <input className="btn btn-primary" type="submit" value="Sign Up"/>
                 </form>
                 <p className='text-center'>Already Have an account? <Link to='/login' className='text-neutral-content'>Log in</Link></p>
-                <button className='btn btn-secondary'>Google</button>
             </div>
         </div>
     );

@@ -20,12 +20,12 @@ const NavBar = () => {
                 </Link>
                 <ul className="bg-primary">
                 <li className='btn btn-primary'><Link to='/products'>All Products</Link></li>
-                <li className='btn btn-primary'><Link to='/'>IOS</Link></li>
-                <li className='btn btn-primary'><Link to='/'>Android</Link></li>
-                <li className='btn btn-primary'><Link to='/'>Tablets</Link></li>
+                <li className='btn btn-primary'><Link to='/ios'>IOS</Link></li>
+                <li className='btn btn-primary'><Link to='/android'>Android</Link></li>
+                <li className='btn btn-primary'><Link to='/tablet'>Tablets</Link></li>
                 </ul>
             </li>
-            <li><Link to='/blog'>Blogs</Link></li>
+            <li><Link to='/blogs'>Blogs</Link></li>
             { user?.uid ?  <>
                 <li><Link to='/manage'>Manage</Link></li>
                 <li><button onClick={handleLogOut}>Log Out</button></li> 

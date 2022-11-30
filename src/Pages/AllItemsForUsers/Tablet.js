@@ -1,24 +1,22 @@
-import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute';
 import Details from './Details';
 import Product from './Product';
 import UserInfo from './UserInfo';
-import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute'
 
-const AllProducts = () => {
-    const [details, setDetails] = useState(null)
+const Tablet = () => {
+    const [details, setDetails] = useState(null);
+    const [products, setProducts] = useState([]);
 
-    const {data: products = []} = useQuery({
-        queryKey: ['phoneInfoCollection'],
-        queryFn: () => fetch('http://localhost:5000/phoneInfoCollection')
-                        .then(res => res.json())
-    })
-
-    
+    useEffect(() =>{
+        fetch('http://localhost:5000/phoneInfoCollection/Tablet')
+        .then(res => res.json())
+        .then(data => setProducts(data))
+    },[])
     return (
         <div>
             <div>
-                <h1 className="bg-primary text-white text-center p-4 rounded-xl text-5xl my-5">All Products for Sale</h1>
+                <h1 className="bg-primary text-white text-center p-4 rounded-xl text-5xl my-5">Android Devices</h1>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-10 mb-5'>
                 {
@@ -46,4 +44,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default Tablet;
