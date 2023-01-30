@@ -16,7 +16,7 @@ const Tablet = () => {
     return (
         <div>
             <div className='max-w-[1200px] mx-10 lg:mx-auto'>
-                <h1 className="bg-gradient-to-b from-[#414141] to-[#000000] text-white text-center p-4 rounded-xl text-5xl my-5">Android Devices</h1>
+                <h1 className="bg-gradient-to-b from-[#414141] to-[#000000] text-white text-center p-4 rounded-xl text-5xl my-5">Tablets</h1>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-10 mb-5'>
                 {

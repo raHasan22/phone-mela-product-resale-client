@@ -9,7 +9,7 @@ const Offers = () => {
                 <h2 className="card-title text-white text-4xl">Ongoing Discount</h2>
                 <p className='text-white'>1. We are providing flat 10% discount all of our iPhones and 8% discount on android phones until Qatar world cup 2022 Final</p>
                 <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn bg-cyan-700 hover:bg-sky-900 w-28 btn-sm text-white">Buy Now</button>
                 </div>
             </div>
             </div>

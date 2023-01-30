@@ -13,8 +13,8 @@ const Product = ({product, setDetails}) => {
             <p>Rom: {rom}</p>
             <p>Price: ${sellingPrice}</p>
             <div className="card-actions">
-            <label htmlFor="details-1" className="btn" onClick={()=> setDetails(product)}>Details</label>
-            <label htmlFor="user-info" className="btn btn-primary"  onClick={()=> setDetails(product)}>Buy Now</label>
+            <label htmlFor="details-1" className="btn btn-sm text-white" onClick={()=> setDetails(product)}>Details</label>
+            <label htmlFor="user-info" className="btn btn-primary btn-sm text-white"  onClick={()=> setDetails(product)}>Buy Now</label>
             </div>
         </div>
         </div>
