@@ -3,17 +3,22 @@ import React, { useState } from 'react';
 import Details from './Details';
 import Product from './Product';
 import UserInfo from './UserInfo';
-import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute'
+import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute';
+import { FaCircleNotch } from "react-icons/fa";
 
 const AllProducts = () => {
-    const [details, setDetails] = useState(null)
+    const [details, setDetails] = useState(null);
+    
 
-    const {data: products = []} = useQuery({
+    const { isLoading, data: products = []} = useQuery({
         queryKey: ['phoneInfoCollection'],
         queryFn: () => fetch('https://mobile-phone-resale-server.vercel.app/phoneInfoCollection')
                         .then(res => res.json())
     })
-
+    if (isLoading){
+        return <div className='flex items-center justify-center my-20'><FaCircleNotch className='text-8xl animate-spin'></FaCircleNotch></div>
+      
+    }
     
     return (
         <div>

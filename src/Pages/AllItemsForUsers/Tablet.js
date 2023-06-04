@@ -3,16 +3,29 @@ import PrivateRoute from '../../Routes/PrivateRoute/PrivateRoute';
 import Details from './Details';
 import Product from './Product';
 import UserInfo from './UserInfo';
+import { FaCircleNotch } from "react-icons/fa";
+
 
 const Tablet = () => {
     const [details, setDetails] = useState(null);
     const [products, setProducts] = useState([]);
+    const [loader, setLoader] = useState(false);
+
 
     useEffect(() =>{
+        setLoader(true);
         fetch('https://mobile-phone-resale-server.vercel.app/phoneInfoCollection/Tablet')
         .then(res => res.json())
-        .then(data => setProducts(data))
+        .then(data => {
+            setProducts(data);
+            setLoader(false);
+        })
     },[])
+    if(loader) {
+        return <div className='flex items-center justify-center my-20'>
+        <FaCircleNotch className='text-8xl animate-spin'></FaCircleNotch>
+        </div>
+    }
     return (
         <div>
             <div className='max-w-[1200px] mx-10 lg:mx-auto'>

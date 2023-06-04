@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Product = ({product, setDetails}) => {
-    const {brandName, model, ram, rom, image, sellingPrice} = product;
+    const {brandName, model, ram, rom, image, marketPrice, sellingPrice} = product;
     return (
         <div className="card w-full bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
@@ -11,7 +11,7 @@ const Product = ({product, setDetails}) => {
             <h2 className="card-title">{brandName} {model}</h2>
             <p>Ram: {ram}</p>
             <p>Rom: {rom}</p>
-            <p>Price: ${sellingPrice}</p>
+            <p>Price: <span className='line-through'>${marketPrice}</span> ${sellingPrice}</p>
             <div className="card-actions">
             <label htmlFor="details-1" className="btn btn-sm text-white" onClick={()=> setDetails(product)}>Details</label>
             <label htmlFor="user-info" className="btn btn-primary btn-sm text-white"  onClick={()=> setDetails(product)}>Buy Now</label>
