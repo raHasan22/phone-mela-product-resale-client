@@ -45,9 +45,7 @@ const Stats = () => {
         <div className="stat shadow-inner">
           <div className="stat-figure text-secondary">
             <div className="avatar online">
-              <div className="w-16 rounded-full">
-               
-              </div>
+              <div className="w-16 rounded-full"></div>
             </div>
           </div>
           <div className="stat-value">86%</div>

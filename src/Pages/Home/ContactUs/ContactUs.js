@@ -8,12 +8,12 @@ const ContactUs = () => {
   return (
     <div className="mx-5 max-w-[1200px] lg:mx-auto my-10">
       <div className="flex w-full min-h-screen justify-center items-center">
-        <div className="flex flex-col md:flex-row md:justify-between  space-y-6 md:space-x-6 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl text-white overflow-hidden">
+        <div className="flex flex-col md:flex-row md:justify-between  space-y-6 md:space-x-6 md:space-y-0 bg-cyan-700 w-full max-w-6xl p-8 sm:p-12 rounded-xl text-white overflow-hidden">
           <div className="flex flex-col space-y-8 justify-between ">
             <div className="">
               <h1 className="font-bold text-4xl tracking-wide">Contact Us</h1>
               <p className="pt-2 text-cyan-100 text-sm">
-               At your emergency, you can Contact us easily from here
+                At your emergency, you can Contact us easily from here
               </p>
             </div>
             <div className="flex flex-col space-y-6 ">
@@ -61,7 +61,7 @@ const ContactUs = () => {
                   />
                 </div>
                 <div>
-                <label htmlFor="email" className="text-sm">
+                  <label htmlFor="email" className="text-sm">
                     Your Email
                   </label>
                   <input
@@ -71,7 +71,7 @@ const ContactUs = () => {
                   />
                 </div>
                 <div>
-                <label htmlFor="message" className="text-sm">
+                  <label htmlFor="message" className="text-sm">
                     Message
                   </label>
                   <textarea
@@ -81,7 +81,9 @@ const ContactUs = () => {
                     className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300 mt-2"
                   />
                 </div>
-                <button className="inline-block self-end bg-cyan-700 text-white rounded-lg font-bold px-6 py-2 uppercase text-sm">Send Message</button>
+                <button className="inline-block self-end bg-cyan-700 text-white rounded-lg font-bold px-6 py-2 uppercase text-sm">
+                  Send Message
+                </button>
               </form>
             </div>
           </div>

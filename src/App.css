@@ -27,6 +27,9 @@
 .App-link {
   color: #61dafb;
 }
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
 
 @keyframes App-logo-spin {
   from {
